@@ -1,0 +1,419 @@
+:root {
+    --teal-primary: #7e0091;
+    --teal-dark: #0e6c63;
+    --sidebar-bg: #f5f6f8;
+    --sidebar-hover: #eaebee;
+    --text-dark: #22252a;
+    --text-muted: #000000;
+    --border-color: #7e0091;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background-color: #fafbfc;
+    line-height: 1.6;
+}
+
+/* Top Header Bar */
+.top-header {
+    height: 60px;
+    background-color: var(--teal-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.brand-title {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.user-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-circle {
+    width: 34px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Layout & Sidebar Navigasi */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 24px 16px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sidebar-header p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #4caf50;
+    border-radius: 50%;
+}
+
+.sidebar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.nav-link svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.nav-link:hover {
+    background-color: var(--sidebar-hover);
+    color: var(--teal-primary);
+}
+
+.nav-link.active {
+    background-color: var(--teal-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(18, 136, 125, 0.3);
+}
+
+.nav-link.active svg {
+    stroke: #ffffff;
+}
+
+.sidebar-footer {
+    font-size: 11px;
+    color: #999;
+}
+
+/* Konten Utama */
+.main-content {
+    margin-left: 240px;
+    flex: 1;
+    padding: 40px 48px;
+    max-width: 1150px;
+}
+
+.category-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--teal-primary);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.page-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 750px;
+}
+
+/* Grids & Kartu */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--teal-primary);
+    margin-bottom: 12px;
+}
+
+/* Layout Hero Beranda */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-heading {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 12px 0 16px;
+}
+
+.teal-text {
+    color: var(--teal-primary);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--teal-primary);
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    padding: 11px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.btn-primary svg,
+.btn-outline svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.large-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: var(--teal-primary);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.profile-name {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.profile-sub {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.profile-quote {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.chip {
+    background-color: #f2f3f6;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+/* Skill Progress Bars */
+.section-box-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--teal-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.skill-percent {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.progress-track {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--teal-primary);
+    border-radius: 999px;
+}
+
+/* Form Kontak */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: var(--teal-primary);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: flex-start;
+}
